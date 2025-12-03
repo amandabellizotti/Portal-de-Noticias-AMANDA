@@ -1,0 +1,403 @@
+body {
+  background-color: gainsboro;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: darkred;
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+  height: 200px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  text-decoration: none;
+}
+nav ul li {
+  margin: 0 15px;
+  list-style-type: none;
+}
+nav ul li a {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative; 
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav ul li a::after {
+  content: ''; 
+    position: absolute;
+    width: 0; /* A linha começa invisível */
+    height: 3px; /* Espessura da linha */
+    bottom: 0; /* Posição: alinhada com a parte de baixo do texto */
+    left: 50%; /* Ponto de partida: centro do link */
+    transform: translateX(-50%);
+    background-color: #ffffff; 
+    transition: width 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.campo-pesquisa {
+  padding: 6px;
+  background-color: rgb(105, 2, 2);
+  border: none;
+}
+
+.botao-pesquisa {
+  padding: 6px 10px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar {
+  display: none;
+}
+
+/* Botão hamburguer */
+.menu-btn {
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Sidebar lateral */
+.sidebar {
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background-color: #111;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1001;
+}
+
+/* Botão fechar */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Itens do menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 18px 25px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Sidebar aberto */
+.sidebar.open {
+  left: 0;
+}
+
+/* Fundo escuro ao abrir */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.overlay.show {
+  display: block;
+}
+
+form {
+  align-items: center;
+}
+.sidebar {
+  display: grid;
+}
+
+/* Item do menu */
+.item {
+  list-style: none;
+}
+
+/* Botão */
+.item-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Flecha */
+.seta {
+  color: #b30000;
+  transition: transform 0.2s;
+}
+
+/* Lista interna (oculta por padrão) */
+.sublista {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 8px;
+  display: none;
+}
+
+.sublista li {
+  margin-bottom: 10px;
+}
+
+
+.sublista a:hover {
+  color: #b30000;
+}
+
+.flex-educacao, .flex-esporte, .flex-economia{
+  margin: 60px;
+}
+
+.conteudo {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333333;
+  text-align: justify;
+}
+
+.conteudo p {
+  line-height: 1.9;
+}
+
+.videos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.videos h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.videos h3 {
+  color: darkblue;
+}
+
+.video-item {
+  flex: 1;
+  max-width: 50%;
+  margin-left: 70px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+iframe {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 1, 0.3);
+}
+
+.esporte nav ul {
+  display: block; 
+}
+
+.esporte nav ul li {
+  list-style-type: disc;
+}
+
+main {
+  margin: 50px;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: darkred;
+}
+
+.comentario {
+  border:1px solid #ccc ;
+  max-width: 70%;
+  margin: 50px auto; 
+  padding: 30px;
+  margin-top: 5%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comentario h2 {
+  color: darkred;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 1%;
+  margin-bottom: 2%;
+  margin-top: 0;
+  text-align: left;
+  font-size: 2em;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Essencial para a largura funcionar corretamente */
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.comentario button {
+  background-color: darkred;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+.comentario button:hover {
+  background-color: #b30000;
+  transition: 0.3s;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: darkred;
+  color: #eceff1;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+
+/*      RESPONSIVIDADE         */
+
+@media (max-width: 1024px) {
+  header img {
+    height: 130px;
+  }
+
+  nav ul li a {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/*TELAS PEQUENAS*/
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    padding: 10px 15px;
+  }
+
+  header img {
+    height: 90px;
+  }
+
+  /* Esconde o menu normal */
+  nav ul {
+    display: none;
+  }
+
+  /* Mostra o menu */
+  .menu-btn {
+    display: flex;
+  }
+
+  /* Vídeos */
+  .video-item {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
+
+
+

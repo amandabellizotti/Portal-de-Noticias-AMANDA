@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/contato.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>O Verbo</title>
+  </head>
+  <body>
+    <header>
+      <div id="menu-btn" class="menu-btn">☰</div>
+      <img src="/img/img-logo.png" alt="logo" />
+      <nav>
+        <ul>
+          <li><a href="home.html#home">Início</a></li>
+
+          <li><a href="contato.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <form action="/busca" method="get" class="barra-pesquisa">
+        <input
+          type="text"
+          placeholder="Buscar"
+          name="q"
+          class="campo-pesquisa"
+        />
+        <button type="submit" class="botao-pesquisa">🔍︎​</button>
+      </form>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+      <div class="close-btn" id="close-btn">×</div>
+      <ul>
+        <li><a href="home.html#home">Início</a></li>
+        <li><a href="noticias.html#noticia">Notícia</a></li>
+        <li><a href="noticia-educacao.html#educacao">Educação</a></li>
+        <li><a href="noticia-esporte.html#esportes">Esportes</a></li>
+        <li class="item">
+          <button class="item-btn">
+              Mais Lidas <span class="seta">›</span>
+          </button>
+      
+          <ul class="sublista">
+              <li><a href="noticia-esporte.html#maislidas"> 1° - Quando o Brasil joga de novo? Veja calendário da Seleção até a Copa</a></li>
+      
+              <li><a href="noticia-educacao.html#maislidas"> 2° - Gabarito do 2º dia de Enem 2025 é divulgado; veja as questões anuladas</a></li>
+      
+              <li><a href="home.html#saude"> 3° - Anvisa determina recolhimento de lotes de sabão líquido Ypê por contaminação;
+              </a></li>
+          </ul>
+      </li>
+        <li><a href="contato.html#contato">Entre em contato</a></li>
+      </ul>
+    </div>
+
+    <!-- Overlay escuro ao abrir o menu -->
+    <div id="overlay" class="overlay"></div>
+
+    <main>
+      <h2>Fale Conosco – Sua Voz é Importante!</h2> 
+      <section id="horario-atendimento">
+        <h3>Horário de Atendimento da Redação</h3>
+        <table id="horarios">
+            <thead>
+                <tr>
+                    <th>Dia da Semana</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda-feira a Sexta-feira</td>
+                    <td>09:00h às 18:00h</td>
+                </tr>
+                <tr>
+                    <td>Sábados</td>
+                    <td>09:00h às 12:00h</td>
+                </tr>
+                <tr>
+                    <td>Domingos e Feriados</td>
+                    <td>Fechado</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+      <h4>
+        Temos o prazer em ouvir você! Seja para tirar dúvidas sobre uma notícia,
+        enviar uma sugestão de pauta, fazer uma crítica construtiva ou para
+        propostas de parceria, preencha o formulário abaixo. Agradecemos o seu
+        interesse em interagir com <strong>o Verbo</strong>
+      </h4>
+
+      <section id="contato">
+        <h1>ENTRE EM CONTATO</h1>
+        <form action="#" method="post">
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" placeholder="Nome" 
+          title="Apenas letras são permitidas" required />
+
+          <label for="telefone">Telefone *</label>
+          <input type="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" 
+          required />
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="seu.email@exemplo.com" 
+          required />
+          
+          <label for="assunto">Assunto *</label>
+            <select id="assunto" name="assunto" required>
+                <option value="">Selecione um assunto</option>
+                <option value="duvida">Dúvida sobre Notícia</option>
+                <option value="sugestao">Sugestão de Pauta</option>
+                <option value="parceria">Proposta de Parceria</option>
+                <option value="critica">Crítica ou Sugestão ao Site</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <fieldset class="radio-grupo">
+              <legend>Preferência de Contato *</legend>
+              <input type="radio" id="email-contato" name="tipo_contato" value="email" required />
+              <label for="email-contato">E-mail</label><br>
+              <input type="radio" id="telefone-contato" name="tipo_contato" value="telefone"  required/>
+              <label for="telefone-contato">Telefone</label>
+          </fieldset>
+
+          <label for="anexo">Anexar Documento (Opcional)</label>
+            <input type="file" id="anexo" name="anexo" accept=".pdf, .doc, .docx, .png, .jpg" />
+
+          <label for="mensagem">Sua mensagem</label>
+          <textarea placeholder="Mensagem" required></textarea>
+          
+          <div class="termos">
+          <fieldset class="checkbox-grupo">
+            <input type="checkbox" id="aceite" name="aceite_termos" required />
+            <label for="aceite">Eu li e concordo com a <a href="termos.html" target="_blank">Política de Privacidade</a> *</label>
+        </fieldset>
+      </div>
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+    </main>
+    <footer>
+      <p>
+        Email Redação: redacao@overbo.com.br | CNPJ: 00.000.000/0001-00 |
+        Telefone: (11) 5555-2025
+      </p>
+      <p>© 2025 O Verbo. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const sidebar = document.getElementById("sidebar");
+      const closeBtn = document.getElementById("close-btn");
+      const overlay = document.getElementById("overlay");
+
+      function openMenu() {
+        sidebar.classList.add("open");
+        overlay.classList.add("show");
+      }
+
+      function closeMenu() {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("show");
+      }
+
+      btn.onclick = openMenu;
+      closeBtn.onclick = closeMenu;
+      overlay.onclick = closeMenu;
+    </script>
+    <script>
+      document.querySelectorAll('.item-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+    
+              const item = btn.parentElement;
+              const lista = item.querySelector('.sublista');
+    
+              // Fecha os outros itens, caso existam
+              document.querySelectorAll('.item').forEach(i => {
+                  if (i !== item) {
+                      i.classList.remove('ativo');
+                      i.querySelector('.sublista').style.display = "none";
+                  }
+              });
+    
+              // Abre/fecha o clicado
+              if (item.classList.contains('ativo')) {
+                  item.classList.remove('ativo');
+                  lista.style.display = "none";
+              } else {
+                  item.classList.add('ativo');
+                  lista.style.display = "block";
+              }
+          });
+      });
+    </script>
+  </body>
+</html>

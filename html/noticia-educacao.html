@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/noticia.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>O Verbo</title>
+  </head>
+  <body>
+    <header>
+      <div id="menu-btn" class="menu-btn">☰</div>
+      <img src="/img/img-logo.png" alt="logo" />
+      <nav>
+        <ul>
+          <li><a href="home.html#home">Início</a></li>
+
+          <li><a href="contato.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <form action="/busca" method="get" class="barra-pesquisa">
+        <input
+          type="text"
+          placeholder="Buscar"
+          name="q"
+          class="campo-pesquisa"
+        />
+        <button type="submit" class="botao-pesquisa">🔍︎​</button>
+      </form>
+    </header>
+    <div id="sidebar" class="sidebar">
+      <div class="close-btn" id="close-btn">×</div>
+      <ul>
+        <li><a href="home.html#home">Início</a></li>
+        <li><a href="noticias.html#noticia">Notícia</a></li>
+        <li><a href="noticia-educacao.html#educacao">Educação</a></li>
+        <li><a href="noticia-esporte.html#esportes">Esportes</a></li>
+        <li class="item">
+          <button class="item-btn">
+              Mais Lidas <span class="seta">›</span>
+          </button>
+      
+          <ul class="sublista">
+              <li><a href="noticia-esporte.html#maislidas"> 1° - Quando o Brasil joga de novo? Veja calendário da Seleção até a Copa</a></li>
+      
+              <li><a href="noticia-educacao.html#maislidas"> 2° - Gabarito do 2º dia de Enem 2025 é divulgado; veja as questões anuladas</a></li>
+      
+              <li><a href="home.html#saude"> 3° - Anvisa determina recolhimento de lotes de sabão líquido Ypê por contaminação;
+              </a></li>
+          </ul>
+      </li>
+        <li><a href="contato.html#contato">Entre em contato</a></li>
+      </ul>
+    </div>
+
+    <!-- Overlay escuro ao abrir o menu -->
+    <div id="overlay" class="overlay"></div>
+
+    <main>
+      <div class="conteudo">
+      <div class="educacao" >
+      <h3>EXAME NACIONAL</h3>
+      <h1>
+        Gabarito do 2º dia de Enem 2025 é divulgado; veja as questões anuladas
+      </h1>
+      <p>
+        Publicação estava prevista para quinta-feira, mas foi antecipada para
+        esta quarta.
+      </p>
+
+      <h3>Por Fulano da Silva</h3>
+      <h4>19/11/2025 12h03  Atualizado agora</h4>
+      <img src="/img/enem.jpeg" alt="Caderno Enem" />
+      <div class="conteudo">
+      <p>
+        O Ministério da Educação (MEC) e o Inep, instituto responsável pela
+        aplicação do Enem, divulgaram nesta quarta-feira (19), o gabarito
+        oficial do Enem 2025, antes previsto para a quinta-feira (20). A
+        antecipação do resultado oficial foi anunciada nas redes sociais na
+        terça-feira, quando três questões do exame foram anuladas. O MEC
+        identificou "similaridades" com o conteúdo divulgado na live do
+        universitário Edcley Teixeira — não explicitou, porém, na ocasião, que
+        questões eram essas. <br>
+        Dias antes da provas do último domingo (16),
+        questões foram apresentadas como possíveis itens a serem cobrados no
+        exame em uma live no YouTube. Ao menos cinco eram quase iguais às que
+        caíram na avaliação oficial. O Ministério da Educação (MEC) decidiu pela
+        anulação de três questões, e a Polícia Federal (PF) foi acionada para
+        apurar irregularidades. <br> <br>
+        <strong>Questões anuladas:</strong>
+        <ul>
+          <li>
+            <strong>Fotossíntese: </strong>(115 na cinza; 121 na amarela; 132 na verde; 123 na azul)</li>
+              <li><strong>Grito:</strong> (118 na cinza; 115 na amarela; 135 na verde; 132 na azul)</li>
+            <li><strong>Parcelamento de R$ 60 mil:</strong> (172 na cinza; 178 na amarela; 168 na verde; 174 na azul)
+          </li>
+        </ul>
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <section class="comentario">
+   
+    <form action="#">
+      <label for="mensagem"> <h2>DEIXE SEU COMENTÁRIO</h2> </label>
+      <textarea id="comentario" name="texto_comentario" rows="6" required placeholder="Escreva seu comentário aqui..."></textarea>
+          <button type="submit">Enviar Comentário</button>
+
+    </form>
+  </section>
+
+    </main>
+    <footer>
+      <p>Email Redação: redacao@overbo.com.br | CNPJ: 00.000.000/0001-00 | Telefone: (11) 5555-2025</p>
+      <p>© 2025 O Verbo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const sidebar = document.getElementById("sidebar");
+      const closeBtn = document.getElementById("close-btn");
+      const overlay = document.getElementById("overlay");
+
+      function openMenu() {
+        sidebar.classList.add("open");
+        overlay.classList.add("show");
+      }
+
+      function closeMenu() {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("show");
+      }
+
+      btn.onclick = openMenu;
+      closeBtn.onclick = closeMenu;
+      overlay.onclick = closeMenu;
+    </script>
+
+<script>
+  document.querySelectorAll('.item-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+
+          const item = btn.parentElement;
+          const lista = item.querySelector('.sublista');
+
+          // Fecha os outros itens, caso existam
+          document.querySelectorAll('.item').forEach(i => {
+              if (i !== item) {
+                  i.classList.remove('ativo');
+                  i.querySelector('.sublista').style.display = "none";
+              }
+          });
+
+          // Abre/fecha o clicado
+          if (item.classList.contains('ativo')) {
+              item.classList.remove('ativo');
+              lista.style.display = "none";
+          } else {
+              item.classList.add('ativo');
+              lista.style.display = "block";
+          }
+      });
+  });
+</script>
+  </body>
+</html>

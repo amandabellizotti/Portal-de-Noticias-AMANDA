@@ -1,0 +1,406 @@
+body {
+  background-color: gainsboro;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: darkred;
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+  height: 200px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative; 
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav ul li a::after {
+  content: ''; 
+    position: absolute;
+    width: 0; /* A linha começa invisível */
+    height: 3px; /* Espessura da linha */
+    bottom: 0; /* Posição: alinhada com a parte de baixo do texto */
+    left: 50%; /* Ponto de partida: centro do link */
+    transform: translateX(-50%);
+    background-color: #ffffff; 
+    transition: width 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.campo-pesquisa {
+  padding: 6px;
+  background-color: rgb(105, 2, 2);
+  border: none;
+}
+
+.botao-pesquisa {
+  padding: 6px 10px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar {
+  display: none;
+}
+
+/* Botão */
+.menu-btn {
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Sidebar lateral */
+.sidebar {
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background-color: #111;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1001;
+}
+
+/* Botão fechar */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Itens do menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 18px 25px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Sidebar aberto */
+.sidebar.open {
+  left: 0;
+}
+
+/* Fundo escuro ao abrir */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.overlay.show {
+  display: block;
+}
+
+form {
+  align-items: center;
+}
+
+
+.sidebar {
+  display: grid;
+}
+
+/* Item do menu */
+.item {
+  list-style: none;
+}
+
+/* Botão */
+.item-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Flecha */
+.seta {
+  color: #b30000;
+  transition: transform 0.2s;
+}
+
+/* Lista interna (oculta por padrão) */
+.sublista {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 8px;
+  display: none;
+}
+
+.sublista li {
+  margin-bottom: 10px;
+}
+
+.sublista a:hover {
+  color: #b30000;
+}
+
+main h2, h4 {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: darkred;
+}
+
+section[id="contato"] {
+  display: flexbox;
+  background-color: white;
+  justify-content: center;
+  align-self: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 80%;
+  border: #ccc solid 1px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 1, 0.1);
+  margin-bottom: 3%;
+}
+
+section h1 {
+  text-align: center;
+}
+
+form[action="#"] {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+section input,
+textarea, fieldset, legend  {
+  padding: 2%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+.termos fieldset {
+  border:none
+}
+
+button[type="submit"] {
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: rgb(177, 217, 159);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 15%;
+  font-size: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px auto 0; /* Centraliza o bloco do botão */
+  width: 20%;
+}
+
+/* Estilo para a seção que contém a tabela */
+#horario-atendimento {
+  margin: 40px auto;
+  max-width: 60%; /* Limita a largura para melhor visualização */
+}
+
+#horario-atendimento h3 {
+  text-align: center;
+}
+
+/* Título (h2) */
+#horario-atendimento h2 {
+  text-align: center;
+  color: darkred;
+  margin-bottom: 20px;
+}
+
+/* Estilo da Tabela */
+#horarios {
+  width: 100%;
+  border-collapse: collapse; /* Mescla as bordas das células para um visual limpo */
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+/* Estilo para o Cabeçalho (<th>) e Células (<td>) */
+#horarios th, #horarios td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Estilização do Cabeçalho da Tabela (Fundo escuro/Vermelho) */
+#horarios th {
+  background-color: darkred;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: darkred;
+  color: #eceff1;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 1024px) {
+  header img {
+    height: 130px;
+  }
+
+  nav ul li a {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/*TELAS PEQUENAS*/
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    padding: 10px 15px;
+  }
+
+  header img {
+    height: 90px;
+  }
+
+  /* Esconde o menu normal */
+  nav ul {
+    display: none;
+  }
+
+  /* Mostra o menu */
+  .menu-btn {
+    display: flex;
+  }
+
+  /* Contato */
+  section[id="contato"] {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  section button {
+    width: 40%;
+    margin: 20px auto;
+  }
+
+  #horario-atendimento {
+    max-width: 90%;
+  }
+}
+
+
+
+
+
