@@ -97,7 +97,7 @@ nav ul li a:hover::after {
 }
 
 /* Botão */
-.menu-btn {
+.menu-btn button {
   font-size: 35px;
   color: white;
   cursor: pointer;
