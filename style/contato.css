@@ -84,7 +84,7 @@ nav ul li a:hover::after {
   border: none;
 }
 
-.botao-pesquisa button {
+button[type="submit" class="botao-pesquisa"] {
   padding: 6px 10px;
   border: none;
   background: white;
