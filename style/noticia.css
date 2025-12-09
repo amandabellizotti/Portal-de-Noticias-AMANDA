@@ -413,9 +413,12 @@ footer p {
   }
 
   iframe {
-    width: 100%;
-    height: 220px;  /* garante proporção boa no celular */
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;  /* espaço entre um vídeo e outro */
+  border-radius: 8px;   /* opcional – deixa mais bonito */
   }
+
 }
 
 
